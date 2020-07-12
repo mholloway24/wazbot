@@ -1,10 +1,24 @@
 require("dotenv").config();
 var ComfyJS = require("comfy.js");
+var commands = require("./commands/textCommands.js");
 
-ComfyJS.onCommand = ( user, command, message, flags, extra ) => {    
-  if( command === "test" ) {
-    ComfyJS.Say( "replying to !test" );
-  }
+ComfyJS.onCommand = ( user, command, message, flags, extra ) => {  
+    let isValidCommand = false;
+
+    commands.TextCommands.forEach(function(elem, index){
+        console.log(index);
+        console.log(elem);
+        if(elem.command === command)
+        {
+            ComfyJS.Say(elem.text);
+            isValidCommand = true;
+        }
+    });
+
+    if(!isValidCommand)
+    {
+        ComfyJS.Say(`!${command} is not a known command. Type !help to see the available list of commands`);
+    }
 }
 
 ComfyJS.onChat = ( user, message, flags, self, extra ) => {
