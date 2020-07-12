@@ -5,9 +5,7 @@ var commands = require("./commands/textCommands.js");
 ComfyJS.onCommand = ( user, command, message, flags, extra ) => {  
     let isValidCommand = false;
 
-    commands.TextCommands.forEach(function(elem, index){
-        console.log(index);
-        console.log(elem);
+    commands.textCommands.forEach(function(elem, index){
         if(elem.command === command)
         {
             ComfyJS.Say(elem.text);
@@ -37,4 +35,4 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
   }
 }
 
-ComfyJS.Init( process.env.TWITCHUSER, process.env.OAUTH );
+ComfyJS.Init( process.env.TWITCHUSER, process.env.OAUTH, process.env.TWITCHCHANNEL );
