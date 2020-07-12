@@ -1,5 +1,5 @@
 {
-  "name": "wazaby-bot",
+  "name": "wazbot",
   "version": "0.0.1",
   "description": "Chatbot for WazabyDev Twitch channel",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mholloway24/wazbot.git"
   },
-  "author": "mike@wazabytech.com",
+  "author": "Mike Holloway",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mholloway24/wazbot/issues"
