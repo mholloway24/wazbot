@@ -1,12 +1,19 @@
 
-var textCommands = [    
+var textCommands = [
     {
         command: 'help',
-        text: 'You can use the following commands in chat: !test !help'
+        text: 'You can use the following commands in chat: !test !so !help',
+        aliases: ['help', 'commands']
     },
     {
         command: 'test',
-        text: 'replying to !test'
+        text: 'This is a test message',
+        aliases: ['test', 'testing']
+    },
+    {
+        command: 'so',
+        text: 'Give @{user} a follow at https://twitch.tv/{user}',
+        aliases: ['so', 'shoutout']
     }
 ];
 
