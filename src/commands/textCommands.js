@@ -2,7 +2,7 @@
 var textCommands = [
     {
         command: 'help',
-        text: 'You can use the following commands in chat: !help !about !github !discord',
+        text: 'You can use the following commands in chat: !help !about !github !discord !so',
         aliases: ['help', 'commands']
     },
     {
