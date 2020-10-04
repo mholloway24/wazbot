@@ -1,0 +1,24 @@
+{
+  "name": "wazbot",
+  "version": "0.0.1",
+  "description": "Chatbot for WazabyDev Twitch channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mholloway24/wazbot.git"
+  },
+  "author": "Mike Holloway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mholloway24/wazbot/issues"
+  },
+  "homepage": "https://github.com/mholloway24/wazbot#readme",
+  "dependencies": {
+    "comfy.js": "^1.1.0",
+    "dotenv": "^8.2.0"
+  }
+}
