@@ -2,7 +2,7 @@
 var textCommands = [
     {
         command: 'help',
-        text: 'You can use the following commands in chat: !test !so !help',
+        text: 'You can use the following commands in chat: !help !about !github !discord',
         aliases: ['help', 'commands']
     },
     {
@@ -12,8 +12,23 @@ var textCommands = [
     },
     {
         command: 'so',
-        text: 'Give @{user} a follow at https://twitch.tv/{user}',
+        text: 'Give {mentioned-user} a follow at https://twitch.tv/{mentioned-user}',
         aliases: ['so', 'shoutout']
+    },
+    {
+        command: 'github',
+        text: 'You can see WazabyDev\'s github at https://github.com/mholloway24',
+        aliases: ['github', 'gh']
+    },
+    {
+        command: 'discord',
+        text: 'Join our Discord server at https://discord.gg/Ba8NKM',
+        aliases: ['discord']
+    },
+    {
+        command: 'about',
+        text: 'Wanna know about WazabyDev? Just ask.',
+        aliases: ['about', 'who']
     }
 ];
 

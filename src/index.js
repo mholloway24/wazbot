@@ -7,9 +7,12 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
 
     commands.textCommands.forEach(function (elem, index) {
         if (elem.aliases.indexOf(command) > -1) {
-            var transformedText = transformText(elem.text, message, flags, extra);
-            console.log(transformedText);
-            ComfyJS.Say(elem.text);
+            var transformedText = elem.text;
+            if (elem.text.indexOf("{mentioned-user}") > -1) {
+                transformedText = elem.text.replace(/{mentioned-user}/g, message);
+            }
+
+            ComfyJS.Say(transformedText);
             isValidCommand = true;
         }
     });
@@ -17,13 +20,6 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
     if (!isValidCommand) {
         ComfyJS.Say(`!${command} is not a known command. Type !help to see the available list of commands`);
     }
-}
-
-function transformText(text, message, flags, extra) {
-    if (text.contains('{mentioned_user}')) {
-        return text.replace('{mentioned_user}')
-    }
-    return text;
 }
 
 ComfyJS.onChat = (user, message, flags, self, extra) => {
