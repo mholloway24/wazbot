@@ -13,7 +13,8 @@ var textCommands = [
     {
         command: 'so',
         text: 'Give {mentioned-user} a follow at https://twitch.tv/{mentioned-user}',
-        aliases: ['so', 'shoutout']
+        aliases: ['so', 'shoutout'],
+        emptyText: 'You forgot to add a user! So follow me!'
     },
     {
         command: 'github',

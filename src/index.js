@@ -10,6 +10,11 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
             var transformedText = elem.text;
             if (elem.text.indexOf("{mentioned-user}") > -1) {
                 transformedText = elem.text.replace(/{mentioned-user}/g, message);
+
+                if(message.length == 0 && elem.emptyText !== undefined)
+                {
+                    transformedText = elem.emptyText;
+                }
             }
 
             ComfyJS.Say(transformedText);
@@ -23,7 +28,7 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
 }
 
 ComfyJS.onChat = (user, message, flags, self, extra) => {
-
+    
 }
 
 ComfyJS.Init(process.env.TWITCHUSER, process.env.OAUTH, process.env.TWITCHCHANNEL);
