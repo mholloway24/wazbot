@@ -19,6 +19,6 @@
   "homepage": "https://github.com/mholloway24/wazbot#readme",
   "dependencies": {
     "comfy.js": "^1.1.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.6.0"
   }
 }
